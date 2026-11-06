@@ -1,0 +1,21 @@
+22:14:52 loading data/raw
+22:15:25 clean   | 2,830,743 -> 2,198,386 rows, 68 features
+22:15:30 binary  | fitting logreg on 1,538,870 rows
+22:16:06 binary  | logreg        acc=0.98028 F1=0.9346 DR=0.9209 FPR=0.00899 (36s)
+22:16:06 binary  | fitting random_forest on 1,538,870 rows
+22:20:20 binary  | random_forest acc=0.99906 F1=0.9969 DR=0.9960 FPR=0.00039 (250s)
+22:20:20 binary  | fitting hist_gb on 1,538,870 rows
+22:21:41 binary  | hist_gb       acc=0.99926 F1=0.9976 DR=0.9971 FPR=0.00034 (75s)
+22:21:41 multi   | fitting logreg
+22:23:45 multi   | logreg        acc=0.99371 macroF1=0.7175 (117s)
+22:23:45 multi   | fitting random_forest
+22:28:39 multi   | random_forest acc=0.99864 macroF1=0.8301 (283s)
+22:28:39 multi   | fitting hist_gb
+22:35:18 multi   | hist_gb       acc=0.99877 macroF1=0.8302 (369s)
+22:35:45 ablation| strict (default): no port, deduplicated: 2,198,386 rows
+22:37:09 ablation| F1=0.9976 FPR=0.00034 test-in-train=0.0% conflicting=0
+22:37:41 ablation| with destination port, deduplicated: 2,496,544 rows
+22:39:32 ablation| F1=0.9982 FPR=0.00037 test-in-train=0.0% conflicting=0
+22:39:45 ablation| with destination port, NOT deduplicated (common tutorial setup): 2,827,876 rows
+22:41:45 ablation| F1=0.9978 FPR=0.00076 test-in-train=13.9% conflicting=6,790
+22:41:45 done in 26.9 min
